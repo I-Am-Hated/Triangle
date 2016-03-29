@@ -67,7 +67,7 @@ namespace TriangleLibrary
                     ErrorMessage = "Переполнение. Заданы слишком большие стороны треугольника"
                 };
 
-            if (hypotenuse > cathetusA + cathetusB)
+            if ((hypotenuse > cathetusA + cathetusB) || (cathetusA * cathetusA + cathetusB * cathetusB) != hypotenuse * hypotenuse)
                 return new Result
                 {
                     Square = null,
